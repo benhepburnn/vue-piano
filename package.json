@@ -1,14 +1,32 @@
 {
-  "name": "vue-piano",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@benhepburn/vue-piano",
+  "version": "1.0.0",
+  "private": false,
+  "author": {
+    "name": "Ben Hepburn",
+    "email": "benjburn89@gmail.com"
+  },
+  "repository": "https://github.com/benhepburnn/vue-piano",
+  "bugs": "https://github.com/benhepburnn/vue-piano/issues",
+  "keywords": [
+    "vue",
+    "piano",
+    "js",
+    "tone",
+    "tonejs"
+  ],
+  "license": "MIT",
+  "main": ".dist/vue-piano.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-library": "vue-cli-service build --target lib --name vue-piano ./src/install.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@tonejs/piano": "^0.2.1",
     "core-js": "^3.6.5",
+    "tone": "^14.7.77",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -38,5 +56,8 @@
     "> 1%",
     "last 2 versions",
     "not dead"
+  ],
+  "files": [
+    "dist/*"
   ]
 }
